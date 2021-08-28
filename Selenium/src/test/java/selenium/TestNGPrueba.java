@@ -12,5 +12,6 @@ public class TestNGPrueba {
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://www.google.com");
 		driver.close();
+		//ejemplo push
   }
 }

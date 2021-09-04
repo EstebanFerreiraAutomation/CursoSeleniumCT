@@ -14,12 +14,20 @@ public class Ejemplo_Metodos {
 		
 		String autos = auto(3);
 		System.out.println(autos);
+		
+		int resultadoSuma = suma (5,9,9);
+		System.out.println(resultadoSuma);
 
 	}
 	
 	public static int suma(int a, int b) {
 		int c = a + b;
 		return c;
+	}
+	
+	public static int suma (int a, int b, int c) {
+		int d = a + b + c;
+		return d;
 	}
 	
 	public static String auto (int a) {

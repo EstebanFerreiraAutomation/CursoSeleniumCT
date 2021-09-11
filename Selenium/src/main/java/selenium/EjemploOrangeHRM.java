@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class EjemploOrangeHRM {
 
@@ -29,15 +30,68 @@ public class EjemploOrangeHRM {
 		btnLogin.click();
 		Thread.sleep(4000);
 		
-		//Obtengo webelements de 2da página
-		WebElement dropDown = driver.findElement(By.xpath("//*[@id=\"welcome\"]"));
-		WebElement btnLogout = driver.findElement(By.xpath("//*[@id=\"welcome-menu\"]/ul/li[3]/a"));
-		dropDown.click();
-		Thread.sleep(2000);
-		btnLogout.click();
-		Thread.sleep(2000);
+		String title = driver.getTitle();
+		System.out.println("***TITULO*** " + title);
 		
-		driver.quit();
+		String urlActual = driver.getCurrentUrl();
+		System.out.println("***URL*** " + urlActual);
+		
+		//Métodos de navegación
+		driver.navigate().back();
+		Thread.sleep(500);
+		driver.navigate().forward();
+		Thread.sleep(500);
+		driver.navigate().refresh();
+		Thread.sleep(500);		
+		
+		//Click en 'Assign Leave'
+		
+		WebElement assignLeavebtn = driver.findElement(By.className("quickLinkText"));
+		assignLeavebtn.click();
+		
+		//Enviar texto a Employee name
+		WebElement employeeNameTxtBox = driver.findElement(By.name("assignleave[txtEmployee][empName]"));		
+		employeeNameTxtBox.sendKeys("Esteban");
+		Thread.sleep(2000);
+
+		//Borrar texto
+		employeeNameTxtBox.clear();
+		
+		//Verificar web element desplegado en pantalla
+		boolean assignBtn = driver.findElement(By.id("assignBtn")).isDisplayed();
+		if (assignBtn) {
+			System.out.println("El botón Assign está desplegado");
+		}
+		
+		//Obtener texto
+		String welcomeMsj = driver.findElement(By.id("welcome")).getText();
+		System.out.println("El mensaje es " + welcomeMsj);
+		
+		boolean msj = welcomeMsj.contains("Paul");
+		if (msj) {
+			System.out.println("El mensaje contiene el nombre de Paul");			
+		}else {
+			System.out.println("El mensaje no contiene el nombre de Paul");
+		}
+		
+		//Ejemplo dropdown
+		Select leaveTypeDrpDwn = new Select(driver.findElement(By.id("assignleave_txtLeaveType")));
+		leaveTypeDrpDwn.selectByVisibleText("CAN - Vacation");
+		Thread.sleep(2000);
+		leaveTypeDrpDwn.selectByValue("5");
+		
+		
+		//Logoff
+//		Select welcomeDrpDwnBtn = new Select(driver.findElement(By.xpath("//*[@id=\"welcome\"]")));
+//		welcomeDrpDwnBtn.click();
+//		Thread.sleep(2000);
+//		WebElement btnLogout = driver.findElement(By.xpath("//*[@id=\"welcome-menu\"]/ul/li[3]/a"));
+//		btnLogout.click();
+//		Thread.sleep(2000);		
+		
+		// Cerrar navegador
+		driver.close(); //Cierra la ventana actual que el webdriver está usando
+		driver.quit(); //Cierra todas las ventanas de la ejecución actual
 	}
 
 }

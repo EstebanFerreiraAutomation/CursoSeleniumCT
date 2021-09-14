@@ -1,6 +1,7 @@
 package pruebaEntrevista;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertNotEquals;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -41,22 +42,18 @@ public class TestPrueba {
 		menorPrecio.click();
 		Thread.sleep(500);
 		
-		WebElement ultimoElementoBox = driver.findElement(By.xpath("//*[@id=\"root-app\"]/div/div[1]/section/ol/li[50]"));
-		actions.moveToElement(ultimoElementoBox);
-		Thread.sleep(500);
+		WebElement ultimoElementoBox = driver.findElement(By.xpath("//*[@id=\"root-app\"]/div/div[1]/section/ol/li[50]/div/div/div[1]/a/div/div/div/div/div/img"));		
+		ultimoElementoBox.click();
+		Thread.sleep(500);		
 		
-		WebElement ultimoElementoPrice = driver.findElement(By.xpath("//*[@id=\"root-app\"]/div/div[1]/section/ol/li[47]/div/div/div[2]/div[2]/div[1]/div[1]/a/div/div/span[1]/span[2]/span[2]"));
-		ultimoElementoPrice.click();
-		Thread.sleep(500);
-		
-		WebElement price = driver.findElement(By.xpath("//*[@id=\"root-app\"]/div[2]/div[2]/div[1]/div[1]/div/div[1]/div[2]/div[2]/div[1]/span/span[2]/span[2]"));
+		WebElement price = driver.findElement(By.className("price-tag-fraction"));
 		
 		String showedPrice = price.getText();
 		System.out.println("***PRECIO*** " + showedPrice);
 		String expectedPrice = "29.999";
 		
-		assertEquals(showedPrice, expectedPrice);
-		
+		assertNotEquals(showedPrice, expectedPrice);
+		//assertEquals(showedPrice, expectedPrice);		
 
 		Thread.sleep(5000);
 		driver.quit();

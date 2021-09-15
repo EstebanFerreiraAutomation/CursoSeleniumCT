@@ -1,7 +1,6 @@
 package pruebaEntrevista;
 
-import static org.testng.Assert.assertNotEquals;
-
+import static org.testng.AssertJUnit.assertEquals;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -46,12 +45,10 @@ public class TestPrueba {
 		
 		WebElement price = driver.findElement(By.className("price-tag-fraction"));
 		
-		String showedPrice = price.getText();
-		System.out.println("***PRECIO*** " + showedPrice);
-		String expectedPrice = "29.999";
+		String showedPrice = price.getText();		
+		String expectedPrice = "29.999";		
 		
-		assertNotEquals(showedPrice, expectedPrice);
-		//assertEquals(showedPrice, expectedPrice);		
+		assertEquals(showedPrice, expectedPrice);				
 
 		Thread.sleep(5000);
 		driver.quit();

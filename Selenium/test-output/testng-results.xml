@@ -2,16 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-09-14T18:19:51Z" name="Default suite" finished-at="2021-09-14T18:20:17Z" duration-ms="26658">
+  <suite started-at="2021-09-19T23:22:55Z" name="Default suite" finished-at="2021-09-19T23:23:14Z" duration-ms="19613">
     <groups>
     </groups>
-    <test started-at="2021-09-14T18:19:51Z" name="Default test" finished-at="2021-09-14T18:20:17Z" duration-ms="26658">
-      <class name="pruebaEntrevista.TestPrueba">
-        <test-method signature="f()[pri:0, instance:pruebaEntrevista.TestPrueba@4686afc2]" started-at="2021-09-14T15:19:51Z" name="f" finished-at="2021-09-14T15:20:17Z" duration-ms="26645" status="PASS">
+    <test started-at="2021-09-19T23:22:55Z" name="Default test" finished-at="2021-09-19T23:23:14Z" duration-ms="19613">
+      <class name="loginTests.TC_04">
+        <test-method is-config="true" signature="startWebDriver()[pri:0, instance:loginTests.TC_04@28276e50]" started-at="2021-09-19T20:22:55Z" name="startWebDriver" finished-at="2021-09-19T20:22:58Z" duration-ms="2647" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
-      </class> <!-- pruebaEntrevista.TestPrueba -->
+        </test-method> <!-- startWebDriver -->
+        <test-method signature="TC_04_correctData()[pri:0, instance:loginTests.TC_04@28276e50]" started-at="2021-09-19T20:22:58Z" name="TC_04_correctData" finished-at="2021-09-19T20:23:14Z" duration-ms="16759" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_04_correctData -->
+        <test-method is-config="true" signature="close()[pri:0, instance:loginTests.TC_04@28276e50]" started-at="2021-09-19T20:23:14Z" name="close" finished-at="2021-09-19T20:23:14Z" duration-ms="197" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- loginTests.TC_04 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -31,6 +31,8 @@ public class TestPrueba {
 		televisoresOptn.click();
 		Thread.sleep(500);
 		
+		//Segunda Web
+		
 		WebElement orderByDrpBtn = driver.findElement(By.className("andes-dropdown__trigger"));
 		orderByDrpBtn.click();
 		Thread.sleep(500);
@@ -41,7 +43,9 @@ public class TestPrueba {
 		
 		WebElement ultimoElementoBox = driver.findElement(By.xpath("//*[@id=\"root-app\"]/div/div[1]/section/ol/li[50]/div/div/div[1]/a/div/div/div/div/div/img"));		
 		ultimoElementoBox.click();
-		Thread.sleep(500);		
+		Thread.sleep(500);
+		
+		//Tercera web
 		
 		WebElement price = driver.findElement(By.className("price-tag-fraction"));
 		

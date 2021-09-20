@@ -2,21 +2,27 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-09-20T19:33:10Z" name="Default suite" finished-at="2021-09-20T19:33:21Z" duration-ms="11230">
+  <suite started-at="2021-09-20T19:51:07Z" name="Default suite" finished-at="2021-09-20T19:51:20Z" duration-ms="12776">
     <groups>
     </groups>
-    <test started-at="2021-09-20T19:33:10Z" name="Default test" finished-at="2021-09-20T19:33:21Z" duration-ms="11230">
-      <class name="pruebaEntrevista.TestPrueba">
-        <test-method signature="f()[pri:0, instance:pruebaEntrevista.TestPrueba@4686afc2]" started-at="2021-09-20T16:33:10Z" name="f" finished-at="2021-09-20T16:33:21Z" duration-ms="11217" status="FAIL">
+    <test started-at="2021-09-20T19:51:07Z" name="Default test" finished-at="2021-09-20T19:51:20Z" duration-ms="12776">
+      <class name="ar.com.mercadolibre.pruebaTests.TC_01">
+        <test-method is-config="true" signature="startWebDriver()[pri:0, instance:ar.com.mercadolibre.pruebaTests.TC_01@28276e50]" started-at="2021-09-20T16:51:07Z" name="startWebDriver" finished-at="2021-09-20T16:51:09Z" duration-ms="2324" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWebDriver -->
+        <test-method signature="TC_01_SelectLastTV()[pri:0, instance:ar.com.mercadolibre.pruebaTests.TC_01@28276e50]" started-at="2021-09-20T16:51:09Z" name="TC_01_SelectLastTV" finished-at="2021-09-20T16:51:15Z" duration-ms="5945" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected:<44.719> but was:<29.999>]]>
+              <![CDATA[expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected:<44.719> but was:<29.999>
-	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:101)
-	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:108)
-	at pruebaEntrevista.TestPrueba.f(TestPrueba.java:55)
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at ar.com.mercadolibre.pruebaTests.TC_01.TC_01_SelectLastTV(TC_01.java:52)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -47,8 +53,12 @@
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
-      </class> <!-- pruebaEntrevista.TestPrueba -->
+        </test-method> <!-- TC_01_SelectLastTV -->
+        <test-method is-config="true" signature="close()[pri:0, instance:ar.com.mercadolibre.pruebaTests.TC_01@28276e50]" started-at="2021-09-20T16:51:15Z" name="close" finished-at="2021-09-20T16:51:20Z" duration-ms="4495" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- ar.com.mercadolibre.pruebaTests.TC_01 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

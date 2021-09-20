@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="pruebaEntrevista.TestPrueba">
+      <class name="ar.com.mercadolibre.pruebaTests.TC_01">
         <methods>
-          <include name="f"/>
+          <include name="startWebDriver"/>
+          <include name="close"/>
+          <include name="TC_01_SelectLastTV"/>
         </methods>
-      </class> <!-- pruebaEntrevista.TestPrueba -->
+      </class> <!-- ar.com.mercadolibre.pruebaTests.TC_01 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -14,4 +14,8 @@ public class LastTVPage {
 	@FindBy(className="price-tag-fraction")
 	private WebElement price;
 	
+	public String getPrice () {
+		String prc = price.getText();
+		return prc;
+	}
 }

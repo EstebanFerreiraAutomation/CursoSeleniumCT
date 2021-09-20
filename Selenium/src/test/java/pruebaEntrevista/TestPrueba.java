@@ -35,7 +35,7 @@ public class TestPrueba {
 		
 		WebElement orderByDrpBtn = driver.findElement(By.className("andes-dropdown__trigger"));
 		orderByDrpBtn.click();
-		Thread.sleep(500);
+		Thread.sleep(500);		
 		
 		WebElement menorPrecio = driver.findElement(By.xpath("//*[@id=\"root-app\"]/div/div[1]/section/div[1]/div/div/div/div[2]/div/div/div/ul/li[2]/a/div/div"));
 		menorPrecio.click();

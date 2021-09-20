@@ -51,8 +51,7 @@ public class DirectoryPage {
 	}
 	
 	public String getShownName() {
-		String shownName;
-		shownName = resultName.getText();
+		String shownName = resultName.getText();
 		return shownName;
 	}
 	

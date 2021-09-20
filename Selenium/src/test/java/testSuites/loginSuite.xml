@@ -18,12 +18,6 @@
 		<classes>
 		<class name="loginTests.TC_03"/>
 		</classes>
-	</test> <!-- Test -->
-		
-	<test name="TC_04_correctData">
-		<classes>
-		<class name="loginTests.TC_04"/>
-		</classes>		
-	</test> <!-- Test -->
+	</test> <!-- Test -->	
 	
 </suite> <!-- Suite -->

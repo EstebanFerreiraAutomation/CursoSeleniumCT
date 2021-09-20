@@ -6,6 +6,8 @@ import java.io.IOException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.io.FileHandler;
 
 public class CommonMethods {
@@ -32,6 +34,8 @@ public class CommonMethods {
 		driver.close();
 	}
 		
-	
+	public static void moveTo (WebDriver driver, WebElement element) {
+		new Actions(driver).moveToElement(element).perform();
+	}
 
 }

@@ -32,16 +32,11 @@ public class TC_01 {
 	}
 	
   @Test
-  public void TC_01_SelectLastTV() {
+  public void TC_01_SelectLastTV() throws InterruptedException {
 	  main.moveToCategorias(driver);
 	  main.moveToTecnologia(driver);
 	  main.selectTVOptn();	  
-	  try {
-		Thread.sleep(500);
-	} catch (InterruptedException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}	  
+	  Thread.sleep(500);
 	  tvs.orderBy();
 	  tvs.selectMenorPrecio();
 	  tvs.selectLastTV();

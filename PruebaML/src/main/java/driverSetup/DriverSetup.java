@@ -10,7 +10,7 @@ public class DriverSetup {
 		String exePath = "./driver/chromedriver.exe";
 		System.setProperty("webdriver.chrome.driver", exePath); //Establece propiedad del .exe
 		WebDriver driver = new ChromeDriver(); //Inicializo el driver, instancio
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); //Implicit global
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS); //Implicit global
 		return driver; //Puedo utilizar el driver en cualquier test case del proyecto
 	}
 }
